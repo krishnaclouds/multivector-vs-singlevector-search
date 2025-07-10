@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ASMuvera - MS MARCO Dataset Download and Preprocessing Script
+Muvera - MS MARCO Dataset Download and Preprocessing Script
 
 This script downloads the MS MARCO passage ranking dataset and prepares it for indexing.
 """

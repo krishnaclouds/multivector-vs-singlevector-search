@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ASMuvera Demo Script
+Muvera Demo Script
 Interactive demonstration of single vs multi-vector search
 """
 
@@ -13,7 +13,7 @@ import time
 def demonstrate_search(client: VespaSearchClient):
     """Run an interactive demonstration"""
     
-    print("🔍 ASMuvera: Multi-Vector Search Demonstration")
+    print("🔍 Muvera: Multi-Vector Search Demonstration")
     print("=" * 60)
     print()
     
@@ -142,7 +142,7 @@ def show_system_status(client: VespaSearchClient):
     print()
 
 def main():
-    print("🎯 ASMuvera: Advanced Semantic Multi-Vector Evaluation")
+    print("🎯 Muvera: Advanced Semantic Multi-Vector Evaluation")
     print("Understanding the Power of Multi-Vector Search")
     print("=" * 70)
     print()
@@ -164,7 +164,7 @@ def main():
     print("  • Multi-vectors capture more nuanced semantic relationships")
     print("  • Hybrid approaches can combine the best of both worlds")
     print()
-    print("📖 Learn more about ASMuvera architecture in DESIGN.md")
+    print("📖 Learn more about Muvera architecture in DESIGN.md")
 
 if __name__ == "__main__":
     main()

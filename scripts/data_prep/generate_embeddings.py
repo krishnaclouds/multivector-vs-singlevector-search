@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ASMuvera - Embedding Generation Script
+Muvera - Embedding Generation Script
 
 This script generates both single-vector and multi-vector embeddings for the MS MARCO dataset.
 """

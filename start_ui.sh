@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🌐 Starting ASMuvera Web UI..."
+echo "🌐 Starting Muvera Web UI..."
 echo "================================"
 
 # Check if virtual environment exists

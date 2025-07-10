@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# ASMuvera - Dependencies Installation Script
+# Muvera - Dependencies Installation Script
 # This script sets up the Python environment and installs all required dependencies
 
 set -e
 
-echo "📦 Installing ASMuvera dependencies..."
+echo "📦 Installing Muvera dependencies..."
 
 # Check Python version
 python_version=$(python3 --version 2>&1 | cut -d' ' -f2)
@@ -63,7 +63,7 @@ echo "⚙️ Creating configuration files..."
 mkdir -p config
 
 cat > config/default.yaml << 'EOF'
-# ASMuvera Configuration
+# Muvera Configuration
 
 # Vespa settings
 vespa:

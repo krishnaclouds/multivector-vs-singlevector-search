@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Data Management Script for ASMuvera
+Data Management Script for Muvera
 Helps manage large data files that shouldn't be committed to git
 """
 
@@ -62,8 +62,8 @@ def create_data_manifest():
     }
     
     manifest = {
-        "project": "ASMuvera",
-        "description": "Data manifest for Advanced Semantic Multi-Vector Evaluation",
+        "project": "Muvera",
+        "description": "Data manifest for Multi-Vector Evaluation",
         "generated": "2025-07-10",
         "files": {}
     }
@@ -137,9 +137,9 @@ def check_git_status():
 def create_download_instructions():
     """Create instructions for downloading/generating data"""
     
-    instructions = """# ASMuvera Data Setup Instructions
+    instructions = """# Muvera Data Setup Instructions
 
-This file contains instructions for setting up the data files needed for ASMuvera.
+This file contains instructions for setting up the data files needed for Muvera.
 
 ## Required Data Files
 
@@ -218,7 +218,7 @@ def clean_large_files():
         print("❌ Cancelled")
 
 def main():
-    parser = argparse.ArgumentParser(description="Manage ASMuvera data files")
+    parser = argparse.ArgumentParser(description="Manage Muvera data files")
     parser.add_argument("--check", action="store_true", help="Check data file status")
     parser.add_argument("--manifest", action="store_true", help="Create data manifest")
     parser.add_argument("--git-check", action="store_true", help="Check git status for large files")
@@ -230,7 +230,7 @@ def main():
     
     if args.all or not any(vars(args).values()):
         # Default action: run all checks
-        print("🔧 ASMuvera Data Management")
+        print("🔧 Muvera Data Management")
         print("=" * 40)
         
         manifest = create_data_manifest()

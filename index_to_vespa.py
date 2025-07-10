@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Vespa indexing pipeline for ASMuvera
+Vespa indexing pipeline for Muvera
 Indexes both single-vector and multi-vector documents
 """
 

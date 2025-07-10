@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-ASMuvera (Advanced Semantic Multi-Vector Evaluation and Research Architecture) is a comprehensive research project designed to understand and compare the power of multi-vector representations versus single-vector representations in semantic search using Vespa.
+Muvera is a comprehensive research project designed to understand and compare the power of multi-vector representations versus single-vector representations in semantic search using Vespa.
 
 ## Quick Setup Commands
 

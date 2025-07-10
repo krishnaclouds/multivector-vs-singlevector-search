@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Test script for ASMuvera Web UI
+Test script for Muvera Web UI
 Demonstrates the web interface functionality
 """
 
@@ -13,7 +13,7 @@ def test_web_ui():
     
     base_url = "http://localhost:5000"
     
-    print("🧪 Testing ASMuvera Web UI")
+    print("🧪 Testing Muvera Web UI")
     print("=" * 40)
     
     # Test 1: System Status
@@ -108,8 +108,8 @@ def test_web_ui():
         if response.status_code == 200:
             print("✅ Web interface accessible")
             print(f"   Content length: {len(response.text)} characters")
-            if "ASMuvera" in response.text:
-                print("   ✅ ASMuvera branding detected")
+            if "Muvera" in response.text:
+                print("   ✅ Muvera branding detected")
             if "Multi-Vector" in response.text:
                 print("   ✅ Multi-Vector content detected")
         else:

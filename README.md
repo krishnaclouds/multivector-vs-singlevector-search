@@ -1,6 +1,6 @@
-# ASMuvera: Advanced Semantic Multi-Vector Evaluation and Research Architecture
+# Muvera
 
-ASMuvera is a comprehensive framework for understanding and evaluating the power of multi-vector search using Vespa. It demonstrates the differences between single dense vectors and multi-vector (ColBERT-style) approaches for semantic search.
+Muvera is a comprehensive framework for understanding and evaluating the power of multi-vector search using Vespa. It demonstrates the differences between single dense vectors and multi-vector (ColBERT-style) approaches for semantic search.
 
 ## 🚀 Quick Start
 
@@ -57,7 +57,7 @@ python demo.py
 
 ## 🔬 Architecture Overview
 
-ASMuvera implements two distinct semantic search approaches:
+Muvera implements two distinct semantic search approaches:
 
 ### Single Vector Approach
 - **Embedding**: One 384-dimensional dense vector per document
@@ -180,4 +180,4 @@ See **GIT_GUIDELINES.md** for detailed information about what should and shouldn
 
 ---
 
-**ASMuvera** - Advancing our understanding of multi-vector search architectures 🔍✨
+**Muvera** - Advancing our understanding of multi-vector search architectures 🔍✨

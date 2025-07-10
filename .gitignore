@@ -1,5 +1,5 @@
-# ASMuvera Project .gitignore
-# Advanced Semantic Multi-Vector Evaluation and Research Architecture
+# Muvera Project .gitignore
+# Multi-Vector Evaluation and Research Architecture
 
 # ==============================================================================
 # Python
@@ -357,7 +357,7 @@ config/secrets/
 # ==============================================================================
 # Project Specific
 # ==============================================================================
-# ASMuvera specific excludes
+# Muvera specific excludes
 vespa-app-*.zip
 setup_vespa_*.sh
 

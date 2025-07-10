@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ASMuvera Search and Evaluation Framework
+Muvera Search and Evaluation Framework
 Compares single-vector vs multi-vector search performance
 """
 
@@ -339,13 +339,13 @@ class SearchEvaluator:
         print(f"\n💾 Results saved to {results_path}")
 
 def main():
-    parser = argparse.ArgumentParser(description="ASMuvera Search Evaluation")
+    parser = argparse.ArgumentParser(description="Muvera Search Evaluation")
     parser.add_argument("--max-queries", type=int, default=5, help="Maximum number of queries to evaluate")
     parser.add_argument("--vespa-url", default="http://localhost:8080", help="Vespa URL")
     
     args = parser.parse_args()
     
-    print("🔍 ASMuvera Search Evaluation Framework")
+    print("🔍 Muvera Search Evaluation Framework")
     print("=" * 50)
     
     # Initialize components

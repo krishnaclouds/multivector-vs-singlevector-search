@@ -1,8 +1,8 @@
-# ASMuvera: Multi-Vector Search Comparison Project
+# Muvera: Multi-Vector Search Comparison Project
 
 ## Project Overview
 
-ASMuvera (Advanced Semantic Multi-Vector Evaluation and Research Architecture) is a comprehensive research project designed to understand and compare the power of multi-vector representations versus single-vector representations in semantic search using Vespa.
+Muvera is a comprehensive research project designed to understand and compare the power of multi-vector representations versus single-vector representations in semantic search using Vespa.
 
 ## Objectives
 
@@ -16,7 +16,7 @@ ASMuvera (Advanced Semantic Multi-Vector Evaluation and Research Architecture) i
 ### Core Components
 
 ```
-ASMuvera/
+Muvera/
 ├── vespa/                    # Vespa application configuration
 │   ├── schemas/             # Document schemas for single and multi-vector
 │   ├── services.xml         # Vespa service configuration

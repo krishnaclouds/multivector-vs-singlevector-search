@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ASMuvera Web UI
+Muvera Web UI
 Interactive web interface for testing single vs multi-vector search
 """
 
@@ -282,7 +282,7 @@ def api_sample_queries():
     return jsonify({"queries": sample_queries})
 
 if __name__ == '__main__':
-    print("🌐 Starting ASMuvera Web UI...")
+    print("🌐 Starting Muvera Web UI...")
     print("📍 Access the interface at: http://localhost:5000")
     print("🔍 Compare single vs multi-vector search approaches!")
     app.run(host='0.0.0.0', port=5000, debug=True)

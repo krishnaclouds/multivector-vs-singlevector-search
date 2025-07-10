@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Simple embedding generation for ASMuvera
+Simple embedding generation for Muvera
 Uses basic approaches that work without heavy ML dependencies
 """
 
@@ -101,7 +101,7 @@ def save_embeddings(embeddings: List, filename: str):
     print(f"💾 Saved embeddings to {filepath}")
 
 def main():
-    print("🔢 Generating embeddings for ASMuvera...")
+    print("🔢 Generating embeddings for Muvera...")
     
     # Load processed data
     with open("data/processed/passages.jsonl", 'r') as f:

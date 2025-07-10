@@ -1,6 +1,6 @@
 {
-  "project": "ASMuvera",
-  "description": "Data manifest for Advanced Semantic Multi-Vector Evaluation",
+  "project": "Muvera",
+  "description": "Data manifest for Muvera",
   "generated": "2025-07-10",
   "files": {
     "raw_data": {

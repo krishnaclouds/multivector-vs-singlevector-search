@@ -1,8 +1,8 @@
-# ASMuvera Repository Summary
+# Muvera Repository Summary
 
 ## 📋 Git Repository Status
 
-This document provides an overview of the ASMuvera repository structure and git management approach.
+This document provides an overview of the Muvera repository structure and git management approach.
 
 ## ✅ Files Ready for Git
 
@@ -181,4 +181,4 @@ git gc --prune=now --aggressive
 
 ---
 
-This approach ensures the ASMuvera repository remains clean, fast, and focused on the code while providing clear guidance for data management.
+This approach ensures the Muvera repository remains clean, fast, and focused on the code while providing clear guidance for data management.

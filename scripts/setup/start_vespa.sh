@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ASMuvera - Vespa Setup Script
+# Muvera - Vespa Setup Script
 # This script sets up and starts a local Vespa instance using Docker
 
 set -e
@@ -55,7 +55,7 @@ if [ $attempt -eq $max_attempts ]; then
 fi
 
 # Deploy the application
-echo "📦 Deploying ASMuvera application..."
+echo "📦 Deploying Muvera application..."
 cd "$(dirname "$0")/../.."
 
 # Create application package

@@ -1,6 +1,6 @@
-# Git Guidelines for ASMuvera
+# Git Guidelines for Muvera
 
-This document explains the git workflow and file management strategy for the ASMuvera project.
+This document explains the git workflow and file management strategy for the Muvera project.
 
 ## 📁 What TO Commit
 
@@ -49,7 +49,7 @@ This document explains the git workflow and file management strategy for the ASM
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd ASMuvera
+cd folder
 
 # Set up local environment
 python3 -m venv venv
@@ -199,7 +199,7 @@ Before committing, ensure:
 ### Release Process
 ```bash
 # Tag releases
-git tag -a v1.0.0 -m "ASMuvera v1.0.0: Initial release with multi-vector search"
+git tag -a v1.0.0 -m "Muvera v1.0.0: Initial release with multi-vector search"
 git push origin v1.0.0
 
 # Create release notes
@@ -207,4 +207,4 @@ git push origin v1.0.0
 # Provide setup instructions
 ```
 
-This approach ensures the repository stays clean, fast, and focused on the code while providing clear guidance for handling the data components of the ASMuvera project.
+This approach ensures the repository stays clean, fast, and focused on the code while providing clear guidance for handling the data components of the Muvera project.

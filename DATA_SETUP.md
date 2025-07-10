@@ -1,6 +1,6 @@
-# ASMuvera Data Setup Instructions
+# Muvera Data Setup Instructions
 
-This file contains instructions for setting up the data files needed for ASMuvera.
+This file contains instructions for setting up the data files needed for Muvera.
 
 ## Required Data Files
 
