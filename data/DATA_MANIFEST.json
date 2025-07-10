@@ -1,0 +1,73 @@
+{
+  "project": "ASMuvera",
+  "description": "Data manifest for Advanced Semantic Multi-Vector Evaluation",
+  "generated": "2025-07-10",
+  "files": {
+    "raw_data": {
+      "data/raw/collection.tsv": {
+        "size_bytes": 3116943360,
+        "size_human": "2.9 GB",
+        "md5_hash": "fecdb5a78aef04296456aa1bf8a52809",
+        "exists": true
+      },
+      "data/raw/queries.train.tsv": {
+        "size_bytes": 0,
+        "size_human": "0B",
+        "md5_hash": null,
+        "exists": false
+      },
+      "data/raw/qrels.train.tsv": {
+        "size_bytes": 0,
+        "size_human": "0B",
+        "md5_hash": null,
+        "exists": false
+      }
+    },
+    "processed_data": {
+      "data/processed/passages.jsonl": {
+        "size_bytes": 4265934,
+        "size_human": "4.07 MB",
+        "md5_hash": "747b5b1d60493582bc16ffcfdebc6751",
+        "exists": true
+      },
+      "data/processed/queries.jsonl": {
+        "size_bytes": 265,
+        "size_human": "265.0 B",
+        "md5_hash": "9263bb9dbeedaa7e68aebe46a4e18419",
+        "exists": true
+      },
+      "data/processed/qrels.jsonl": {
+        "size_bytes": 530,
+        "size_human": "530.0 B",
+        "md5_hash": "8b39d73f812f96efe62839d0472e170b",
+        "exists": true
+      }
+    },
+    "embeddings": {
+      "data/embeddings/single_vector_passages.npy": {
+        "size_bytes": 30717056,
+        "size_human": "29.29 MB",
+        "md5_hash": "c687573b19e14d6eddccf182b933b452",
+        "exists": true
+      },
+      "data/embeddings/single_vector_queries.npy": {
+        "size_bytes": 15488,
+        "size_human": "15.12 KB",
+        "md5_hash": "1f91f275954368d37224884cc46c96f1",
+        "exists": true
+      },
+      "data/embeddings/multi_vector_passages.npy": {
+        "size_bytes": 323165859,
+        "size_human": "308.19 MB",
+        "md5_hash": "cff89c91b639f1957cdbd4e96a730215",
+        "exists": true
+      },
+      "data/embeddings/multi_vector_queries.npy": {
+        "size_bytes": 21992,
+        "size_human": "21.48 KB",
+        "md5_hash": "e695a588486c5ebdae29c21dbd41673a",
+        "exists": true
+      }
+    }
+  }
+}

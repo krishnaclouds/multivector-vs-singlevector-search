@@ -1,0 +1,66 @@
+schema multi_vector_document {
+    document multi_vector_document {
+        field id type string {
+            indexing: summary | attribute
+            match: exact
+        }
+        
+        field title type string {
+            indexing: summary | index
+            match: text
+        }
+        
+        field content type string {
+            indexing: summary | index
+            match: text
+        }
+        
+        field url type string {
+            indexing: summary | attribute
+        }
+        
+        field token_embeddings type tensor<float>(token{}, x[128]) {
+            indexing: summary | attribute
+        }
+        
+        field compressed_embeddings type tensor<int8>(token{}, x[128]) {
+            indexing: summary | attribute
+        }
+        
+        field timestamp type long {
+            indexing: summary | attribute
+        }
+    }
+    
+    fieldset default {
+        fields: title, content
+    }
+    
+    rank-profile default {
+        inputs {
+            query(q_token_embeddings) tensor<float>(token{}, x[128])
+        }
+        
+        first-phase {
+            expression: sum(reduce(query(q_token_embeddings) * attribute(token_embeddings), max, x), token)
+        }
+    }
+    
+    rank-profile bm25 {
+        first-phase {
+            expression: nativeRank(title, content)
+        }
+    }
+    
+    rank-profile hybrid_simple {
+        inputs {
+            query(q_token_embeddings) tensor<float>(token{}, x[128])
+            query(text_weight) double: 0.3
+            query(semantic_weight) double: 0.7
+        }
+        
+        first-phase {
+            expression: query(text_weight) * nativeRank(title, content) + query(semantic_weight) * sum(reduce(query(q_token_embeddings) * attribute(token_embeddings), max, x), token)
+        }
+    }
+}

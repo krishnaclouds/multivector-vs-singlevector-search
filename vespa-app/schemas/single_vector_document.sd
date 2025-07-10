@@ -1,0 +1,72 @@
+schema single_vector_document {
+    document single_vector_document {
+        field id type string {
+            indexing: summary | attribute
+            match: exact
+        }
+        
+        field title type string {
+            indexing: summary | index
+            match: text
+        }
+        
+        field content type string {
+            indexing: summary | index
+            match: text
+        }
+        
+        field url type string {
+            indexing: summary | attribute
+        }
+        
+        field embedding type tensor<float>(x[384]) {
+            indexing: summary | attribute
+            attribute {
+                distance-metric: angular
+            }
+        }
+        
+        field timestamp type long {
+            indexing: summary | attribute
+        }
+    }
+    
+    fieldset default {
+        fields: title, content
+    }
+    
+    rank-profile default {
+        inputs {
+            query(q_embedding) tensor<float>(x[384])
+        }
+        
+        first-phase {
+            expression: closeness(field, embedding)
+        }
+        
+        match-features: closeness(field, embedding)
+    }
+    
+    rank-profile bm25 {
+        first-phase {
+            expression: nativeRank(title, content)
+        }
+    }
+    
+    rank-profile hybrid {
+        inputs {
+            query(q_embedding) tensor<float>(x[384])
+            query(text_score_weight) double: 0.3
+            query(semantic_score_weight) double: 0.7
+        }
+        
+        first-phase {
+            expression: query(text_score_weight) * nativeRank(title, content) + query(semantic_score_weight) * closeness(field, embedding)
+        }
+        
+        match-features {
+            closeness(field, embedding)
+            nativeRank(title, content)
+        }
+    }
+}

@@ -1,0 +1,444 @@
+{
+  "timestamp": 1752159398.700664,
+  "queries_evaluated": 3,
+  "results": [
+    {
+      "query_id": "1",
+      "query_text": "what is the manhattan project",
+      "approaches": {
+        "single_vector": {
+          "time_ms": 20.264863967895508,
+          "num_results": 5,
+          "results": [
+            {
+              "id": "test-1",
+              "title": "Test",
+              "content": "This is a test",
+              "relevance": 0.0
+            },
+            {
+              "id": "1",
+              "title": "",
+              "content": "The Manhattan Project and its atomic bomb helped bring an end to World War II. Its legacy of peaceful uses of atomic energy continues to have an impact on history and science.",
+              "relevance": 0.0
+            },
+            {
+              "id": "2",
+              "title": "",
+              "content": "Essay on The Manhattan Project - The Manhattan Project The Manhattan Project was to see if making an atomic bomb possible. The success of this project would forever change the world forever making it ...",
+              "relevance": 0.0
+            },
+            {
+              "id": "3",
+              "title": "",
+              "content": "The Manhattan Project was the name for a project conducted during World War II, to develop the first atomic bomb. It refers specifically to the period of the project from 194 \u00e2\u0080\u00a6 2-1946 under the cont...",
+              "relevance": 0.0
+            },
+            {
+              "id": "4",
+              "title": "",
+              "content": "versions of each volume as well as complementary websites. The first website\u00e2\u0080\u0093The Manhattan Project: An Interactive History\u00e2\u0080\u0093is available on the Office of History and Heritage Resources website, htt...",
+              "relevance": 0.0
+            }
+          ]
+        },
+        "multi_vector": {
+          "time_ms": 49.85404014587402,
+          "num_results": 5,
+          "results": [
+            {
+              "id": "3",
+              "title": "",
+              "content": "The Manhattan Project was the name for a project conducted during World War II, to develop the first atomic bomb. It refers specifically to the period of the project from 194 \u00e2\u0080\u00a6 2-1946 under the cont...",
+              "relevance": 0.07566130999475718
+            },
+            {
+              "id": "2",
+              "title": "",
+              "content": "Essay on The Manhattan Project - The Manhattan Project The Manhattan Project was to see if making an atomic bomb possible. The success of this project would forever change the world forever making it ...",
+              "relevance": 0.07239804416894913
+            },
+            {
+              "id": "5",
+              "title": "",
+              "content": "The Manhattan Project. This once classified photograph features the first atomic bomb \u00e2\u0080\u0094 a weapon that atomic scientists had nicknamed Gadget.. The nuclear age began on July 16, 1945, when it was det...",
+              "relevance": 0.06816359888762236
+            },
+            {
+              "id": "1",
+              "title": "",
+              "content": "The Manhattan Project and its atomic bomb helped bring an end to World War II. Its legacy of peaceful uses of atomic energy continues to have an impact on history and science.",
+              "relevance": 0.05161378951743245
+            },
+            {
+              "id": "simple_test",
+              "title": "Simple Test",
+              "content": "Simple test document",
+              "relevance": 0.04495317116379738
+            }
+          ]
+        },
+        "text_only": {
+          "time_ms": 7.061004638671875,
+          "num_results": 5,
+          "results": [
+            {
+              "id": "7",
+              "title": "",
+              "content": "Manhattan Project. The Manhattan Project was a research and development undertaking during World War II that produced the first nuclear weapons. It was led by the United States with the support of the...",
+              "relevance": 0.09500277012006064
+            },
+            {
+              "id": "3",
+              "title": "",
+              "content": "The Manhattan Project was the name for a project conducted during World War II, to develop the first atomic bomb. It refers specifically to the period of the project from 194 \u00e2\u0080\u00a6 2-1946 under the cont...",
+              "relevance": 0.08779367308457693
+            },
+            {
+              "id": "5",
+              "title": "",
+              "content": "The Manhattan Project. This once classified photograph features the first atomic bomb \u00e2\u0080\u0094 a weapon that atomic scientists had nicknamed Gadget.. The nuclear age began on July 16, 1945, when it was det...",
+              "relevance": 0.07917511344266286
+            },
+            {
+              "id": "1",
+              "title": "",
+              "content": "The Manhattan Project and its atomic bomb helped bring an end to World War II. Its legacy of peaceful uses of atomic energy continues to have an impact on history and science.",
+              "relevance": 0.07372688006137296
+            },
+            {
+              "id": "2",
+              "title": "",
+              "content": "Essay on The Manhattan Project - The Manhattan Project The Manhattan Project was to see if making an atomic bomb possible. The success of this project would forever change the world forever making it ...",
+              "relevance": 0.06599615231144781
+            }
+          ]
+        },
+        "hybrid": {
+          "time_ms": 7.09080696105957,
+          "num_results": 5,
+          "results": [
+            {
+              "id": "test-1",
+              "title": "Test",
+              "content": "This is a test",
+              "relevance": 0.0
+            },
+            {
+              "id": "1",
+              "title": "",
+              "content": "The Manhattan Project and its atomic bomb helped bring an end to World War II. Its legacy of peaceful uses of atomic energy continues to have an impact on history and science.",
+              "relevance": 0.0
+            },
+            {
+              "id": "2",
+              "title": "",
+              "content": "Essay on The Manhattan Project - The Manhattan Project The Manhattan Project was to see if making an atomic bomb possible. The success of this project would forever change the world forever making it ...",
+              "relevance": 0.0
+            },
+            {
+              "id": "3",
+              "title": "",
+              "content": "The Manhattan Project was the name for a project conducted during World War II, to develop the first atomic bomb. It refers specifically to the period of the project from 194 \u00e2\u0080\u00a6 2-1946 under the cont...",
+              "relevance": 0.0
+            },
+            {
+              "id": "4",
+              "title": "",
+              "content": "versions of each volume as well as complementary websites. The first website\u00e2\u0080\u0093The Manhattan Project: An Interactive History\u00e2\u0080\u0093is available on the Office of History and Heritage Resources website, htt...",
+              "relevance": 0.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query_id": "2",
+      "query_text": "atomic bomb world war ii",
+      "approaches": {
+        "single_vector": {
+          "time_ms": 6.476163864135742,
+          "num_results": 5,
+          "results": [
+            {
+              "id": "test-1",
+              "title": "Test",
+              "content": "This is a test",
+              "relevance": 0.0
+            },
+            {
+              "id": "1",
+              "title": "",
+              "content": "The Manhattan Project and its atomic bomb helped bring an end to World War II. Its legacy of peaceful uses of atomic energy continues to have an impact on history and science.",
+              "relevance": 0.0
+            },
+            {
+              "id": "2",
+              "title": "",
+              "content": "Essay on The Manhattan Project - The Manhattan Project The Manhattan Project was to see if making an atomic bomb possible. The success of this project would forever change the world forever making it ...",
+              "relevance": 0.0
+            },
+            {
+              "id": "3",
+              "title": "",
+              "content": "The Manhattan Project was the name for a project conducted during World War II, to develop the first atomic bomb. It refers specifically to the period of the project from 194 \u00e2\u0080\u00a6 2-1946 under the cont...",
+              "relevance": 0.0
+            },
+            {
+              "id": "4",
+              "title": "",
+              "content": "versions of each volume as well as complementary websites. The first website\u00e2\u0080\u0093The Manhattan Project: An Interactive History\u00e2\u0080\u0093is available on the Office of History and Heritage Resources website, htt...",
+              "relevance": 0.0
+            }
+          ]
+        },
+        "multi_vector": {
+          "time_ms": 40.25602340698242,
+          "num_results": 5,
+          "results": [
+            {
+              "id": "1",
+              "title": "",
+              "content": "The Manhattan Project and its atomic bomb helped bring an end to World War II. Its legacy of peaceful uses of atomic energy continues to have an impact on history and science.",
+              "relevance": 0.05768359266221523
+            },
+            {
+              "id": "4",
+              "title": "",
+              "content": "versions of each volume as well as complementary websites. The first website\u00e2\u0080\u0093The Manhattan Project: An Interactive History\u00e2\u0080\u0093is available on the Office of History and Heritage Resources website, htt...",
+              "relevance": 0.0485106662963517
+            },
+            {
+              "id": "2",
+              "title": "",
+              "content": "Essay on The Manhattan Project - The Manhattan Project The Manhattan Project was to see if making an atomic bomb possible. The success of this project would forever change the world forever making it ...",
+              "relevance": 0.04587262310087681
+            },
+            {
+              "id": "3",
+              "title": "",
+              "content": "The Manhattan Project was the name for a project conducted during World War II, to develop the first atomic bomb. It refers specifically to the period of the project from 194 \u00e2\u0080\u00a6 2-1946 under the cont...",
+              "relevance": 0.0456176339648664
+            },
+            {
+              "id": "simple_test",
+              "title": "Simple Test",
+              "content": "Simple test document",
+              "relevance": 0.04431272856891155
+            }
+          ]
+        },
+        "text_only": {
+          "time_ms": 6.813764572143555,
+          "num_results": 5,
+          "results": [
+            {
+              "id": "1",
+              "title": "",
+              "content": "The Manhattan Project and its atomic bomb helped bring an end to World War II. Its legacy of peaceful uses of atomic energy continues to have an impact on history and science.",
+              "relevance": 0.0835663744150954
+            },
+            {
+              "id": "6",
+              "title": "",
+              "content": "Nor will it attempt to substitute for the extraordinarily rich literature on the atomic bombs and the end of World War II. This collection does not attempt to document the origins and development of t...",
+              "relevance": 0.08085424127704834
+            },
+            {
+              "id": "3",
+              "title": "",
+              "content": "The Manhattan Project was the name for a project conducted during World War II, to develop the first atomic bomb. It refers specifically to the period of the project from 194 \u00e2\u0080\u00a6 2-1946 under the cont...",
+              "relevance": 0.07860299668758063
+            },
+            {
+              "id": "7",
+              "title": "",
+              "content": "Manhattan Project. The Manhattan Project was a research and development undertaking during World War II that produced the first nuclear weapons. It was led by the United States with the support of the...",
+              "relevance": 0.061214046435218036
+            },
+            {
+              "id": "2",
+              "title": "",
+              "content": "Essay on The Manhattan Project - The Manhattan Project The Manhattan Project was to see if making an atomic bomb possible. The success of this project would forever change the world forever making it ...",
+              "relevance": 0.041527172091171335
+            }
+          ]
+        },
+        "hybrid": {
+          "time_ms": 5.738019943237305,
+          "num_results": 5,
+          "results": [
+            {
+              "id": "test-1",
+              "title": "Test",
+              "content": "This is a test",
+              "relevance": 0.0
+            },
+            {
+              "id": "1",
+              "title": "",
+              "content": "The Manhattan Project and its atomic bomb helped bring an end to World War II. Its legacy of peaceful uses of atomic energy continues to have an impact on history and science.",
+              "relevance": 0.0
+            },
+            {
+              "id": "2",
+              "title": "",
+              "content": "Essay on The Manhattan Project - The Manhattan Project The Manhattan Project was to see if making an atomic bomb possible. The success of this project would forever change the world forever making it ...",
+              "relevance": 0.0
+            },
+            {
+              "id": "3",
+              "title": "",
+              "content": "The Manhattan Project was the name for a project conducted during World War II, to develop the first atomic bomb. It refers specifically to the period of the project from 194 \u00e2\u0080\u00a6 2-1946 under the cont...",
+              "relevance": 0.0
+            },
+            {
+              "id": "4",
+              "title": "",
+              "content": "versions of each volume as well as complementary websites. The first website\u00e2\u0080\u0093The Manhattan Project: An Interactive History\u00e2\u0080\u0093is available on the Office of History and Heritage Resources website, htt...",
+              "relevance": 0.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query_id": "3",
+      "query_text": "scientific research nuclear weapons",
+      "approaches": {
+        "single_vector": {
+          "time_ms": 5.429983139038086,
+          "num_results": 5,
+          "results": [
+            {
+              "id": "test-1",
+              "title": "Test",
+              "content": "This is a test",
+              "relevance": 0.0
+            },
+            {
+              "id": "1",
+              "title": "",
+              "content": "The Manhattan Project and its atomic bomb helped bring an end to World War II. Its legacy of peaceful uses of atomic energy continues to have an impact on history and science.",
+              "relevance": 0.0
+            },
+            {
+              "id": "2",
+              "title": "",
+              "content": "Essay on The Manhattan Project - The Manhattan Project The Manhattan Project was to see if making an atomic bomb possible. The success of this project would forever change the world forever making it ...",
+              "relevance": 0.0
+            },
+            {
+              "id": "3",
+              "title": "",
+              "content": "The Manhattan Project was the name for a project conducted during World War II, to develop the first atomic bomb. It refers specifically to the period of the project from 194 \u00e2\u0080\u00a6 2-1946 under the cont...",
+              "relevance": 0.0
+            },
+            {
+              "id": "4",
+              "title": "",
+              "content": "versions of each volume as well as complementary websites. The first website\u00e2\u0080\u0093The Manhattan Project: An Interactive History\u00e2\u0080\u0093is available on the Office of History and Heritage Resources website, htt...",
+              "relevance": 0.0
+            }
+          ]
+        },
+        "multi_vector": {
+          "time_ms": 38.93113136291504,
+          "num_results": 5,
+          "results": [
+            {
+              "id": "simple_test",
+              "title": "Simple Test",
+              "content": "Simple test document",
+              "relevance": 0.04565244633704424
+            },
+            {
+              "id": "4",
+              "title": "",
+              "content": "versions of each volume as well as complementary websites. The first website\u00e2\u0080\u0093The Manhattan Project: An Interactive History\u00e2\u0080\u0093is available on the Office of History and Heritage Resources website, htt...",
+              "relevance": 0.031200656783767045
+            },
+            {
+              "id": "1",
+              "title": "",
+              "content": "The Manhattan Project and its atomic bomb helped bring an end to World War II. Its legacy of peaceful uses of atomic energy continues to have an impact on history and science.",
+              "relevance": 0.029622191097587347
+            },
+            {
+              "id": "3",
+              "title": "",
+              "content": "The Manhattan Project was the name for a project conducted during World War II, to develop the first atomic bomb. It refers specifically to the period of the project from 194 \u00e2\u0080\u00a6 2-1946 under the cont...",
+              "relevance": 0.02887183940038085
+            },
+            {
+              "id": "5",
+              "title": "",
+              "content": "The Manhattan Project. This once classified photograph features the first atomic bomb \u00e2\u0080\u0094 a weapon that atomic scientists had nicknamed Gadget.. The nuclear age began on July 16, 1945, when it was det...",
+              "relevance": 0.02798116346821189
+            }
+          ]
+        },
+        "text_only": {
+          "time_ms": 5.786895751953125,
+          "num_results": 3,
+          "results": [
+            {
+              "id": "7",
+              "title": "",
+              "content": "Manhattan Project. The Manhattan Project was a research and development undertaking during World War II that produced the first nuclear weapons. It was led by the United States with the support of the...",
+              "relevance": 0.04796763106708888
+            },
+            {
+              "id": "5",
+              "title": "",
+              "content": "The Manhattan Project. This once classified photograph features the first atomic bomb \u00e2\u0080\u0094 a weapon that atomic scientists had nicknamed Gadget.. The nuclear age began on July 16, 1945, when it was det...",
+              "relevance": 0.02567490472921772
+            },
+            {
+              "id": "4",
+              "title": "",
+              "content": "versions of each volume as well as complementary websites. The first website\u00e2\u0080\u0093The Manhattan Project: An Interactive History\u00e2\u0080\u0093is available on the Office of History and Heritage Resources website, htt...",
+              "relevance": 0.012259765722500425
+            }
+          ]
+        },
+        "hybrid": {
+          "time_ms": 6.068944931030273,
+          "num_results": 5,
+          "results": [
+            {
+              "id": "test-1",
+              "title": "Test",
+              "content": "This is a test",
+              "relevance": 0.0
+            },
+            {
+              "id": "1",
+              "title": "",
+              "content": "The Manhattan Project and its atomic bomb helped bring an end to World War II. Its legacy of peaceful uses of atomic energy continues to have an impact on history and science.",
+              "relevance": 0.0
+            },
+            {
+              "id": "2",
+              "title": "",
+              "content": "Essay on The Manhattan Project - The Manhattan Project The Manhattan Project was to see if making an atomic bomb possible. The success of this project would forever change the world forever making it ...",
+              "relevance": 0.0
+            },
+            {
+              "id": "3",
+              "title": "",
+              "content": "The Manhattan Project was the name for a project conducted during World War II, to develop the first atomic bomb. It refers specifically to the period of the project from 194 \u00e2\u0080\u00a6 2-1946 under the cont...",
+              "relevance": 0.0
+            },
+            {
+              "id": "4",
+              "title": "",
+              "content": "versions of each volume as well as complementary websites. The first website\u00e2\u0080\u0093The Manhattan Project: An Interactive History\u00e2\u0080\u0093is available on the Office of History and Heritage Resources website, htt...",
+              "relevance": 0.0
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
