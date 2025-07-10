@@ -9,50 +9,106 @@ Muvera is a comprehensive framework for understanding and evaluating the power o
 - Python 3.8+
 - 8GB+ RAM recommended
 
-### Setup
-
-1. **Set up Python environment:**
+### One-Command Setup
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+# Complete setup in one command
+./quick_start.sh
 ```
 
-2. **Start Vespa:**
+### Manual Setup
+
+1. **Run comprehensive setup:**
 ```bash
-./setup_vespa.sh
+python setup.py
 ```
 
-3. **Download and process data:**
+2. **OR use the CLI interface:**
 ```bash
-python process_data_simple.py
+# Setup project
+python muvera.py setup
+
+# Download data
+python muvera.py download
+
+# Generate embeddings
+python muvera.py embeddings
+
+# Run indexing
+python muvera.py index
+
+# Start evaluation
+python muvera.py evaluate
+
+# Launch web UI
+python muvera.py ui
+
+# Run complete pipeline
+python muvera.py pipeline
 ```
 
-4. **Generate embeddings:**
+3. **Check project status:**
 ```bash
-python generate_embeddings_simple.py
+python muvera.py status
 ```
 
-5. **Index documents:**
-```bash
-# Index single vector documents
-python index_to_vespa.py --type single --max-docs 10
+## 🏗️ Production-Ready Architecture
 
-# Index multi-vector documents  
-python index_to_vespa.py --type multi --max-docs 5
+### Project Structure
+
+```
+ASMuvera/
+├── src/                      # Source code
+│   ├── core/                 # Core functionality
+│   │   ├── config.py         # Configuration management
+│   │   └── index_to_vespa.py # Vespa indexing
+│   ├── data/                 # Data processing
+│   │   ├── process_data_simple.py
+│   │   └── generate_embeddings_simple.py
+│   ├── evaluation/           # Evaluation and metrics
+│   │   └── search_evaluation.py
+│   ├── ui/                   # User interfaces
+│   │   ├── web_ui.py         # Web interface
+│   │   ├── demo.py           # Interactive demo
+│   │   ├── templates/        # HTML templates
+│   │   └── static/           # Static assets
+│   └── utils/                # Utility functions
+│       └── manage_data.py    # Data management
+├── tests/                    # Test suite
+├── data/                     # Data storage
+│   ├── raw/                  # Raw downloaded data
+│   ├── processed/            # Processed data in JSONL format
+│   └── embeddings/           # Generated embeddings
+├── vespa/                    # Vespa configuration
+│   ├── schemas/              # Vespa schema definitions
+│   ├── services.xml          # Vespa services configuration
+│   └── hosts.xml             # Vespa hosts configuration
+├── scripts/                  # Utility scripts
+│   ├── setup/                # Environment setup scripts
+│   ├── data_prep/            # Data download and processing
+│   └── experiments/          # Experiment runners
+├── config/                   # Configuration files
+│   └── default.yaml          # Default configuration
+├── logs/                     # Log files
+├── muvera.py                 # Main CLI entry point
+├── setup.py                  # Comprehensive setup script
+├── quick_start.sh            # One-command setup
+└── pyproject.toml            # Package configuration
 ```
 
-6. **Run the demonstration:**
-```bash
-python demo.py
-```
+### Configuration Management
 
-7. **Start the Web UI (Interactive):**
+The project uses a centralized configuration system with environment variable support:
+
 ```bash
-./start_ui.sh
-# Or manually:
-# source venv/bin/activate && python web_ui.py
-# Then open http://localhost:5000
+# Environment variables (optional)
+export VESPA_ENDPOINT=http://localhost:8080
+export MAX_PASSAGES=100000
+export SINGLE_VECTOR_MODEL=sentence-transformers/all-MiniLM-L6-v2
+export LOG_LEVEL=INFO
+
+# Or use configuration files
+# config/default.yaml
+# .env file
 ```
 
 ## 🔬 Architecture Overview
@@ -78,8 +134,11 @@ Muvera implements two distinct semantic search approaches:
 Run comprehensive evaluations:
 
 ```bash
-# Evaluate with 5 queries
-python search_evaluation.py --max-queries 5
+# Using CLI
+python muvera.py evaluate
+
+# Direct evaluation
+python src/evaluation/search_evaluation.py --max-queries 5
 
 # Results saved to evaluation_results.json
 ```
@@ -93,17 +152,17 @@ The evaluation compares:
 ## 🛠️ Key Components
 
 ### Data Pipeline
-- `process_data_simple.py` - Downloads and processes MS MARCO data
-- `generate_embeddings_simple.py` - Creates both single and multi-vector embeddings
+- `src/data/process_data_simple.py` - Downloads and processes MS MARCO data
+- `src/data/generate_embeddings_simple.py` - Creates both single and multi-vector embeddings
 
 ### Indexing
-- `index_to_vespa.py` - Indexes documents into Vespa with proper tensor formatting
+- `src/core/index_to_vespa.py` - Indexes documents into Vespa with proper tensor formatting
 - Support for both single and multi-vector document schemas
 
 ### Search & Evaluation
-- `search_evaluation.py` - Comprehensive evaluation framework
-- `demo.py` - Interactive demonstration
-- `web_ui.py` - Web-based interactive interface
+- `src/evaluation/search_evaluation.py` - Comprehensive evaluation framework
+- `src/ui/demo.py` - Interactive demonstration
+- `src/ui/web_ui.py` - Web-based interactive interface
 - Multiple ranking profiles (semantic, text, hybrid)
 
 ### Vespa Configuration
@@ -145,12 +204,61 @@ The interactive web UI (`http://localhost:5000`) provides:
 - **Mobile Responsive**: Works on desktop, tablet, and mobile
 - **Visual Comparison**: Side-by-side result comparison
 
-### Web UI Components
+## 🚀 Production Deployment
 
-- **Search Interface**: Enter queries and select result count
-- **Performance Dashboard**: Compare speed and relevance
-- **Result Panels**: Detailed results for each approach
-- **System Monitor**: Real-time system health status
+### Docker Deployment
+```bash
+# Build and run with Docker
+docker build -t muvera .
+docker run -p 5000:5000 -p 8080:8080 muvera
+
+# Or use Docker Compose
+docker-compose up -d
+```
+
+### Kubernetes Deployment
+```bash
+# Deploy to Kubernetes
+kubectl apply -f k8s/
+```
+
+### Environment Variables
+```bash
+# Production configuration
+VESPA_ENDPOINT=https://your-vespa-cluster.com
+MAX_PASSAGES=1000000
+LOG_LEVEL=WARNING
+FLASK_ENV=production
+```
+
+## 🔧 Development
+
+### Installation for Development
+```bash
+# Install in development mode
+pip install -e .[dev]
+
+# Run tests
+python -m pytest tests/
+
+# Code formatting
+black src/ tests/
+
+# Type checking
+mypy src/
+```
+
+### Testing
+```bash
+# Run all tests
+python -m pytest
+
+# Run specific test
+python -m pytest tests/test_multi_vector.py
+
+# Run with coverage
+python -m pytest --cov=src
+```
 
 ## 📚 Learning Resources
 
@@ -167,16 +275,44 @@ Large data files (embeddings, datasets) are excluded from git. Use the data mana
 
 ```bash
 # Check data file status
-python manage_data.py --check
+python src/utils/manage_data.py --check
 
 # Clean large files before committing
-python manage_data.py --clean
+python src/utils/manage_data.py --clean
 
 # Create data manifest
-python manage_data.py --manifest
+python src/utils/manage_data.py --manifest
 ```
 
-See **GIT_GUIDELINES.md** for detailed information about what should and shouldn't be committed.
+## 🔍 Troubleshooting
+
+### Common Issues
+
+1. **Vespa not starting**: Check Docker is running and port 8080 is available
+2. **Out of memory**: Reduce MAX_PASSAGES or increase Docker memory limit
+3. **Slow indexing**: Reduce batch size or document count
+4. **Connection refused**: Ensure Vespa is fully started (wait 30s after container start)
+
+### Logs
+```bash
+# View logs
+tail -f logs/muvera.log
+
+# Check Vespa logs
+docker logs vespa
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests: `python -m pytest`
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 

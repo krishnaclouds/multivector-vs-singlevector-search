@@ -1,0 +1,63 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Large data files
+data/raw/
+data/embeddings/
+*.npy
+*.tsv
+*.tar.gz
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+docs/
+*.md
+DESIGN.md
+GIT_GUIDELINES.md
+DATA_SETUP.md
+REPOSITORY_SUMMARY.md
+
+# Test files
+tests/
+*.test
+coverage/
+
+# Jupyter notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/

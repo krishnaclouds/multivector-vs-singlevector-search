@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  vespa:
+    image: vespaengine/vespa:latest
+    container_name: muvera-vespa
+    ports:
+      - "8080:8080"
+      - "19071:19071"
+    volumes:
+      - ./vespa:/opt/vespa/var/vespa-app
+    environment:
+      - VESPA_CONFIGSERVER_JVMARGS=-Xmx1g
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/ApplicationStatus"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - muvera-network
+
+  muvera:
+    build: .
+    container_name: muvera-app
+    ports:
+      - "5000:5000"
+    depends_on:
+      vespa:
+        condition: service_healthy
+    environment:
+      - VESPA_ENDPOINT=http://vespa:8080
+      - VESPA_DOCUMENT_API=http://vespa:8080/document/v1
+      - VESPA_SEARCH_API=http://vespa:8080/search/
+      - FLASK_ENV=production
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    networks:
+      - muvera-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+networks:
+  muvera-network:
+    driver: bridge
+
+volumes:
+  muvera-data:
+  muvera-logs:
