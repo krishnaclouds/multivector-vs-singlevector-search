@@ -1,5 +1,5 @@
 # Core dependencies
-pyvespa>=0.45.0
+qdrant-client>=1.7.0
 sentence-transformers>=2.2.2
 transformers>=4.35.0
 torch>=2.0.0
@@ -29,6 +29,7 @@ rich>=13.0.0
 
 # Web UI
 flask>=2.3.0
+flask-cors>=4.0.0
 
 # Development (optional)
 pytest>=7.4.0

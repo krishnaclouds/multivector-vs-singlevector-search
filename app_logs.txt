@@ -1,0 +1,55 @@
+2025-07-11 18:04:32,510 - httpx - INFO - HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+/Users/bkrishna/Desktop/Projects/Research/ASMuvera/app/core/search_service.py:40: UserWarning: Qdrant client version 1.14.3 is incompatible with server version 1.7.0. Major versions should match and minor version difference must not exceed 1. Set check_compatibility=False to skip version check.
+  self.client = QdrantClient(
+2025-07-11 18:04:32,514 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-07-11 18:04:32,514 - app.core.search_service - INFO - ✅ Connected to Qdrant at http://localhost:6333
+2025-07-11 18:04:32,516 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-07-11 18:04:32,516 - app.core.search_service - INFO - ✅ Collection exists: semantic_search
+2025-07-11 18:04:41,159 - app.core.search_service - INFO - ✅ Loaded embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-07-11 18:04:41,191 - app.core.search_service - INFO - ✅ Loaded 12000 documents from processed data
+2025-07-11 18:04:41,192 - __main__ - INFO - 🚀 Starting Semantic Search Application in PRODUCTION mode
+ * Serving Flask app 'main'
+ * Debug mode: off
+2025-07-11 18:04:41,204 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.54.42:5000
+2025-07-11 18:04:41,204 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 18:06:32,257 - __main__ - INFO - GET / - 127.0.0.1
+2025-07-11 18:06:32,258 - main - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/venv/lib/python3.13/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/main.py", line 42, in index
+    return render_template('index.html')
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/venv/lib/python3.13/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/venv/lib/python3.13/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/venv/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/venv/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bkrishna/Desktop/Projects/Research/ASMuvera/venv/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-07-11 18:06:32,264 - __main__ - ERROR - Internal server error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-07-11 18:06:32,265 - werkzeug - INFO - 127.0.0.1 - - [11/Jul/2025 18:06:32] "[35m[1mGET / HTTP/1.1[0m" 500 -

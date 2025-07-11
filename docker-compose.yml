@@ -1,55 +1,48 @@
 version: '3.8'
 
 services:
-  vespa:
-    image: vespaengine/vespa:latest
-    container_name: muvera-vespa
+  # Qdrant Vector Database
+  qdrant:
+    image: qdrant/qdrant:v1.7.0
     ports:
-      - "8080:8080"
-      - "19071:19071"
+      - "6333:6333"  # REST API
+      - "6334:6334"  # gRPC API
     volumes:
-      - ./vespa:/opt/vespa/var/vespa-app
+      - ./qdrant_storage:/qdrant/storage
     environment:
-      - VESPA_CONFIGSERVER_JVMARGS=-Xmx1g
+      - QDRANT__SERVICE__HTTP_PORT=6333
+      - QDRANT__SERVICE__GRPC_PORT=6334
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/ApplicationStatus"]
+      test: ["CMD", "curl", "-f", "http://localhost:6333/health"]
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 60s
-    networks:
-      - muvera-network
+    restart: unless-stopped
 
-  muvera:
+  # Semantic Search Application
+  app:
     build: .
-    container_name: muvera-app
     ports:
       - "5000:5000"
-    depends_on:
-      vespa:
-        condition: service_healthy
     environment:
-      - VESPA_ENDPOINT=http://vespa:8080
-      - VESPA_DOCUMENT_API=http://vespa:8080/document/v1
-      - VESPA_SEARCH_API=http://vespa:8080/search/
       - FLASK_ENV=production
-      - LOG_LEVEL=INFO
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+      - SECRET_KEY=${SECRET_KEY:-default-secret-key}
+    depends_on:
+      qdrant:
+        condition: service_healthy
     volumes:
-      - ./data:/app/data
       - ./logs:/app/logs
-    networks:
-      - muvera-network
+      - ./data:/app/data
+      - ./models:/app/models
+    restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 30s
-
-networks:
-  muvera-network:
-    driver: bridge
 
 volumes:
-  muvera-data:
-  muvera-logs:
+  qdrant_storage:
+    driver: local
